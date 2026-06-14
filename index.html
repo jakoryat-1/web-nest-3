@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEST — Gieo tri thức, ươm tương lai</title>
+<meta name="description" content="NEST — Next-gen Enthusiastic Student Trust. Quỹ học bổng nuôi dưỡng thế hệ học sinh nhiệt huyết.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/landing.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="cursor" id="cursor"></div>
+
+<header id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand"><span class="mark">NEST</span><span>NEST</span></a>
+    <button class="burger" id="burger" aria-label="menu">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="#about" data-cursor>Giới thiệu</a>
+      <a href="#process" data-cursor>Mô hình hoạt động</a>
+      <a href="#impact" data-cursor>Tác động</a>
+      <a href="courses.html" data-cursor>Khóa học</a>
+      <a href="patrons.html" class="nav-cta" data-cursor>Mạnh thường quân</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <span class="pill reveal"><span class="ping"></span> <span data-bind="index.heroPill">Next-gen Enthusiastic Student Trust</span></span>
+      <h1>
+        <span class="line"><span data-bind="index.heroLine1">Gieo tri thức,</span></span>
+        <span class="line"><span class="grad" data-bind="index.heroLine2">ươm mầm tương lai.</span></span>
+      </h1>
+      <p class="lead reveal" data-bind="index.heroLead">NEST là quỹ học bổng nuôi dưỡng thế hệ học sinh nhiệt huyết.</p>
+      <div class="btn-row reveal">
+        <a href="patrons.html" class="btn btn-primary" data-cursor data-bind="index.heroBtnPrimary">Đóng góp cho quỹ →</a>
+        <a href="#about" class="btn btn-ghost" data-cursor data-bind="index.heroBtnGhost">Tìm hiểu thêm</a>
+      </div>
+      <div class="hero-stats" id="herostats-mount"><!-- injected by fx.js --></div>
+    </div>
+    <div class="scroll-cue"><span class="mouse"></span><span>Cuộn xuống</span></div>
+  </section>
+
+  <!-- GIỚI THIỆU -->
+  <section class="block" id="about">
+    <div class="container">
+      <p class="eyebrow reveal" data-bind="index.aboutEyebrow">Vì sao là NEST</p>
+      <h2 class="title reveal" data-bind="index.aboutTitle">Một mô hình minh bạch nơi việc học tự nuôi việc học.</h2>
+      <p class="sub reveal" data-bind="index.aboutSub">Học phí mỗi khoá học chảy thẳng vào quỹ.</p>
+      <div class="features" id="features-mount"><!-- injected by fx.js --></div>
+    </div>
+  </section>
+
+  <!-- MÔ HÌNH HOẠT ĐỘNG (marquee) -->
+  <section class="block" id="process">
+    <div class="container">
+      <p class="eyebrow reveal" data-bind="index.processEyebrow">Hành trình</p>
+      <h2 class="title reveal" data-bind="index.processTitle">Mô hình hoạt động</h2>
+      <p class="sub reveal" data-bind="index.processSub">Ba bước, một vòng tròn tử tế — chạy liên tục. Di chuột vào để kéo qua lại.</p>
+    </div>
+    <div class="marquee" id="marquee">
+      <div class="marquee-track" id="mtrack"><!-- steps injected by fx.js from data --></div>
+    </div>
+    <p class="marquee-hint">↔ Di chuột vào dải để kéo qua lại; rời chuột để tiếp tục chạy.</p>
+  </section>
+
+  <!-- TÁC ĐỘNG -->
+  <section class="block" id="impact">
+    <div class="container">
+      <div class="impact reveal">
+        <h2 data-bind="index.impactTitle">Mỗi khoá học là một viên gạch xây nên tương lai của ai đó.</h2>
+        <div class="impact-grid" id="impactstats-mount"><!-- injected by fx.js --></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA (giữ nguyên bố cục) -->
+  <section class="block cta">
+    <div class="container">
+      <p class="eyebrow reveal" data-bind="index.ctaEyebrow">Sẵn sàng chưa?</p>
+      <h2 class="title reveal" style="margin:0 auto" data-bind="index.ctaTitle">Học một điều mới hôm nay. Thay đổi một cuộc đời ngày mai.</h2>
+      <div class="btn-row reveal">
+        <a href="courses.html" class="btn btn-primary" data-cursor data-bind="index.ctaBtnPrimary">Khám phá khoá học</a>
+        <a href="patrons.html" class="btn btn-ghost" data-cursor data-bind="index.ctaBtnGhost">Trở thành nhà tài trợ</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div class="brand"><span class="mark">NEST</span><span data-org-full>Next-gen Enthusiastic Student Trust</span></div>
+      <div>© 2026 NEST · <a href="courses.html" data-cursor>Khóa học</a> · <a href="patrons.html" data-cursor>Mạnh thường quân</a> · <a href="admin.html" data-cursor>Admin</a></div>
+    </div>
+  </footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/data.js"></script>
+<script src="js/fx.js"></script>
+</body>
+</html>

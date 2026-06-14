@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gửi khóa học của bạn — NEST</title>
+<meta name="description" content="Gửi khóa học demo cho NEST trong 3 bước cực kỳ đơn giản. Ai cũng làm được.">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/landing.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<canvas id="bg-canvas"></canvas>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+<div class="cursor" id="cursor"></div>
+
+<header id="header">
+  <div class="container nav">
+    <a href="index.html" class="brand"><span class="mark">NEST</span><span>NEST</span></a>
+    <button class="burger" id="burger" aria-label="menu">☰</button>
+    <nav class="nav-links" id="navlinks">
+      <a href="index.html#about" data-cursor>Giới thiệu</a>
+      <a href="index.html#process" data-cursor>Mô hình hoạt động</a>
+      <a href="index.html#impact" data-cursor>Tác động</a>
+      <a href="courses.html" class="active" data-cursor>Khóa học</a>
+      <a href="patrons.html" class="nav-cta" data-cursor>Mạnh thường quân</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="hero short">
+    <div class="container">
+      <span class="pill reveal"><span class="ping"></span> <span data-bind="submit.heroPill">Trở thành giảng viên NEST</span></span>
+      <h1>
+        <span class="line"><span data-bind="submit.heroLine1">3 bước đơn giản,</span></span>
+        <span class="line"><span class="grad" data-bind="submit.heroLine2">ai cũng làm được.</span></span>
+      </h1>
+      <p class="lead reveal" data-bind="submit.heroLead">Bạn không cần là chuyên gia công nghệ. Chỉ cần chuyên môn và một chút tâm huyết.</p>
+      <div class="btn-row reveal">
+        <a class="btn btn-primary" data-cursor data-org-mailto href="mailto:">✉️ Gửi khóa học về email quỹ</a>
+        <a href="courses.html" class="btn btn-ghost" data-cursor>← Về trang khóa học</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 STEPS -->
+  <section class="block" id="steps" style="padding-top:20px">
+    <div class="container">
+      <p class="eyebrow reveal center" style="text-align:center">Quy trình</p>
+      <h2 class="title reveal center">Chỉ 3 bước — xong!</h2>
+      <p class="sub reveal center">Ngắn gọn, rõ ràng, không thủ tục rườm rà.</p>
+
+      <div class="steps">
+        <div class="stepcard reveal">
+          <div class="badge">1</div>
+          <div class="ic"><svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h6"/></svg></div>
+          <h3 data-bind="submit.step1Title">Giới thiệu khóa học</h3>
+          <p data-bind="submit.step1Desc">Tạo một file Word / Excel / PDF ngắn gọn gồm: giới thiệu khóa học, mục tiêu, đối tượng hướng tới và syllabus (đề cương) ngắn gọn.</p>
+        </div>
+        <div class="stepcard reveal">
+          <div class="badge">2</div>
+          <div class="ic"><svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M16 10l6-3v10l-6-3z"/></svg></div>
+          <h3 data-bind="submit.step2Title">Đính kèm 1 video bài giảng</h3>
+          <p data-bind="submit.step2Desc">Quay 1 video bài giảng mẫu dài ít nhất 15 phút để NEST cảm nhận phong cách giảng dạy của bạn.</p>
+        </div>
+        <div class="stepcard reveal">
+          <div class="badge">3</div>
+          <div class="ic"><svg class="ic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5 5-5"/></svg></div>
+          <h3 data-bind="submit.step3Title">Chờ phê duyệt</h3>
+          <p data-bind="submit.step3Desc">Gửi tất cả về email của quỹ và chờ phản hồi. Đội ngũ NEST sẽ xem xét và liên hệ lại với bạn.</p>
+        </div>
+      </div>
+
+      <div class="reassure reveal" data-bind="submit.reassure">
+        Thật sự chỉ có vậy. Không phí, không thủ tục rườm rà — 3 bước ngắn gọn, rất dễ, và ai cũng có thể làm được.
+      </div>
+
+      <div class="center" style="margin-top:30px">
+        <a class="btn btn-primary" data-cursor data-org-mailto href="mailto:">✉️ Gửi về <span data-org-email>quynest.scholarship@gmail.com</span></a>
+      </div>
+    </div>
+  </section>
+
+  <foot

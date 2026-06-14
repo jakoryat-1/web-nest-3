@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NEST — Bộ icon</title>
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<style>
+  body{font-family:"Segoe UI",system-ui,sans-serif;background:#f1faf4;color:#21362a;margin:0;padding:40px}
+  h1{color:#2f7a4d;margin:0 0 4px}
+  p{color:#5f7166;margin:0 0 28px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:16px;max-width:900px}
+  .cell{background:#fff;border:1px solid #d8ecdf;border-radius:14px;padding:18px 10px;text-align:center;box-shadow:0 8px 22px rgba(40,110,70,.06)}
+  .cell svg{width:32px;height:32px;color:#2f7a4d}
+  .cell span{display:block;margin-top:10px;font-size:.78rem;color:#5f7166}
+</style>
+</head>
+<body>
+  <h1>Bộ icon NEST</h1>
+  <p>Dùng: <code>&lt;svg class="ic"&gt;&lt;use href="images/icons/nest-icons.svg#ten-icon"&gt;&lt;/use&gt;&lt;/svg&gt;</code> — màu theo <code>color</code> (currentColor).</p>
+  <div class="grid" id="grid"></div>
+  <script>
+    var names=["sprout","book","eye","cap","coin","community","growth","play","star","doc","video","check","bank","pencil","mail","pin","heart"];
+    document.getElementById("grid").innerHTML=names.map(function(n){
+      return '<div class="cell"><svg viewBox="0 0 24 24"><use href="nest-icons.svg#'+n+'"></use></svg><span>'+n+'</span></div>';
+    }).join("");
+  </script>
+</body>
+</html>

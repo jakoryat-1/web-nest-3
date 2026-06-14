@@ -1,0 +1,112 @@
+/* =========================================================
+   admin.css — NEST admin dashboard (friendly UI)
+   ========================================================= */
+:root{
+  --green:#5fb87f; --green-dark:#3f9a63; --green-deep:#2f7a4d;
+  --green-soft:#dcefe3; --mint:#f1faf4; --accent:#a8d8b9; --leaf:#7fc99a;
+  --ink:#21362a; --muted:#5f7166; --line:#dcebe2; --line:#d8ecdf;
+  --ok:#2f9e5f; --warn:#c98a2b; --danger:#e2604f;
+  --font:"Plus Jakarta Sans",system-ui,sans-serif; --display:"Sora",var(--font);
+  --shadow:0 14px 38px rgba(40,110,70,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font);color:var(--ink);background:#eef6f0;line-height:1.55}
+a{color:var(--green-deep)}
+button{font-family:inherit}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:8px;border:none;cursor:pointer;font-weight:700;border-radius:12px;padding:12px 20px;font-size:.95rem;transition:.18s}
+.btn-primary{background:var(--green-deep);color:#fff;box-shadow:0 8px 20px rgba(47,122,77,.28)}
+.btn-primary:hover{background:var(--green-dark);transform:translateY(-1px)}
+.btn-ghost{background:#fff;border:1px solid var(--line);color:var(--green-deep)}
+.btn-ghost:hover{background:var(--green-soft)}
+.btn-gold{background:var(--accent);color:#1f4030}
+.btn-gold:hover{background:var(--leaf)}
+.btn-danger{background:var(--danger);color:#fff}
+.btn-danger:hover{filter:brightness(.94)}
+.btn-sm{padding:8px 14px;font-size:.85rem;border-radius:10px}
+
+/* ---- login ---- */
+.login-wrap{min-height:100vh;display:grid;place-items:center;background:linear-gradient(130deg,var(--green-deep),var(--green));padding:20px}
+.login-card{background:#fff;border-radius:22px;box-shadow:0 24px 70px rgba(0,0,0,.25);padding:40px;width:100%;max-width:400px;text-align:center}
+.login-card .logo{width:64px;height:64px;border-radius:20px;margin:0 auto 16px;background:linear-gradient(135deg,var(--green),var(--accent));display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:800;font-size:1.1rem;box-shadow:0 10px 26px rgba(63,154,99,.35)}
+.login-card h2{font-family:var(--display);color:var(--green-deep);margin-bottom:4px}
+.login-card p.muted{color:var(--muted);margin-bottom:22px;font-size:.92rem}
+.login-card .field{margin-bottom:14px;text-align:left}
+.login-card label{display:block;font-weight:600;font-size:.85rem;margin-bottom:6px}
+.login-card input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:12px;font-size:1rem;background:#fbfefc}
+.login-card input:focus{outline:2px solid var(--accent);border-color:var(--green)}
+.hintbox{margin-top:18px;font-size:.82rem;color:var(--muted);background:var(--green-soft);border-radius:12px;padding:12px 14px;text-align:left;line-height:1.7}
+.hintbox b{color:var(--green-deep)}
+
+/* ---- shell ---- */
+.admin-shell{display:flex;min-height:100vh}
+.admin-side{width:248px;flex:none;background:linear-gradient(180deg,#234032,#1c3328);color:#cfe3d6;padding:22px 0;position:sticky;top:0;height:100vh;display:flex;flex-direction:column}
+.admin-side .a-brand{display:flex;align-items:center;gap:11px;padding:0 22px 18px;border-bottom:1px solid #36513f;margin-bottom:12px}
+.admin-side .a-brand .logo{width:40px;height:40px;border-radius:13px;background:linear-gradient(135deg,var(--green),var(--accent));display:grid;place-items:center;color:#fff;font-family:var(--display);font-weight:800;font-size:.8rem}
+.admin-side .a-brand b{color:#fff;font-family:var(--display);font-size:1.05rem;display:block}
+.admin-side .a-brand small{color:#9fc4ac;font-size:.72rem}
+.admin-nav{flex:1;overflow-y:auto}
+.admin-nav button{display:flex;gap:11px;align-items:center;width:100%;background:none;border:none;color:#cfe3d6;text-align:left;padding:12px 22px;cursor:pointer;font-size:.95rem;font-weight:600;transition:.15s;border-left:3px solid transparent}
+.admin-nav button:hover{background:#2c4537}
+.admin-nav button.active{background:#2c4537;border-left-color:var(--accent);color:#fff}
+.admin-nav .ico{width:22px;text-align:center}
+.admin-side .a-foot{padding:14px 18px 0;border-top:1px solid #36513f;margin-top:8px}
+.admin-side .who{font-size:.82rem;color:#9fc4ac;margin-bottom:10px;line-height:1.5}
+.admin-side .who b{color:#fff;display:block;font-size:.95rem}
+
+.admin-main{flex:1;padding:26px 34px;max-width:1000px}
+.admin-topbar{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:24px;flex-wrap:wrap;gap:12px}
+.admin-topbar h1{font-family:var(--display);color:var(--green-deep);font-size:1.7rem}
+.admin-topbar p{color:var(--muted);margin:0}
+.role-pill{display:inline-block;background:var(--green-soft);color:var(--green-deep);font-weight:700;font-size:.78rem;padding:5px 12px;border-radius:999px}
+
+.admin-panel{display:none}
+.admin-panel.active{display:block;animation:fade .2s}
+@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1}}
+
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);padding:24px;margin-bottom:20px}
+.card h3{font-family:var(--display);margin-bottom:6px;color:var(--green-deep)}
+.card .help{color:var(--muted);font-size:.9rem;margin-bottom:16px}
+.field{margin-bottom:14px}
+.field label{display:block;font-weight:600;font-size:.86rem;margin-bottom:5px}
+.field input,.field textarea,.field select{width:100%;padding:11px 13px;border:1px solid var(--line);border-radius:11px;font-family:inherit;font-size:.95rem;background:#fbfefc}
+.field textarea{min-height:72px;resize:vertical;line-height:1.5}
+.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid var(--accent);border-color:var(--green)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+
+.row-item{border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px;background:#fbfefc}
+.row-item .row-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.row-item .row-head strong{color:var(--green-deep);font-family:var(--display)}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+
+.stat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;margin-bottom:20px}
+.stat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px;box-shadow:var(--shadow)}
+.stat .num{font-family:var(--display);font-size:1.8rem;font-weight:800;color:var(--green-deep);font-variant-numeric:tabular-nums}
+.stat .cap{color:var(--muted);font-size:.85rem;font-weight:600;margin-top:2px}
+
+.quick{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
+.quick a{display:flex;gap:12px;align-items:center;background:#fbfefc;border:1px solid var(--line);border-radius:14px;padding:16px;text-decoration:none;color:var(--ink);transition:.18s;cursor:pointer}
+.quick a:hover{background:var(--green-soft);transform:translateY(-2px)}
+.quick a .qi{font-size:1.5rem}
+.quick a b{font-family:var(--display);color:var(--green-deep);display:block}
+.quick a span{color:var(--muted);font-size:.84rem}
+
+.banner-warn{background:#fff7e9;border:1px solid #f0dcb0;border-left:5px solid var(--warn);border-radius:14px;padding:16px 18px;color:#7a5a1e;font-size:.9rem;margin-bottom:18px;line-height:1.6}
+.pill{display:inline-block;background:var(--green-soft);color:var(--green-deep);font-size:.74rem;font-weight:700;padding:3px 10px;border-radius:999px}
+.logo-prev{width:54px;height:34px;object-fit:contain;border:1px solid var(--line);border-radius:6px;background:#fff;vertical-align:middle}
+
+.subhead{font-family:var(--display);color:var(--green-deep);font-size:1.05rem;margin:6px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--green-soft)}
+
+.toast{position:fixed;bottom:24px;right:24px;background:var(--green-deep);color:#fff;padding:14px 20px;border-radius:14px;box-shadow:var(--shadow);opacity:0;transform:translateY(10px);transition:.25s;z-index:200;font-weight:600}
+.toast.show{opacity:1;transform:translateY(0)}
+
+.burger-admin{display:none;background:none;border:none;font-size:1.5rem;color:var(--green-deep);cursor:pointer}
+@media(max-width:760px){
+  .grid2,.grid3{grid-template-columns:1fr}
+  .admin-side{position:fixed;z-index:50;transform:translateX(-100%);transition:.3s;box-shadow:0 10px 40px rgba(0,0,0,.3)}
+  .admin-side.open{transform:translateX(0)}
+  .admin-main{padding:18px}
+  .burger-admin{display:block}
+}

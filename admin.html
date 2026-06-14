@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bảng quản trị — NEST</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/admin.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+<!-- ============ LOGIN ============ -->
+<div class="login-wrap" id="login-wrap">
+  <div class="login-card">
+    <div class="logo">NEST</div>
+    <h2>Bảng quản trị NEST</h2>
+    <p class="muted">Đăng nhập để quản lý nội dung website</p>
+    <div class="field"><label>Tên đăng nhập</label><input type="text" id="admin-user" placeholder="vd: ceo" autocomplete="username"></div>
+    <div class="field"><label>Mật khẩu</label><input type="password" id="admin-pass" placeholder="Mật khẩu" autocomplete="current-password"></div>
+    <button class="btn btn-primary" id="login-btn" style="width:100%;justify-content:center">Đăng nhập</button>
+    <div class="hintbox" id="login-hint">
+      🔑 <b>Tài khoản demo:</b><br>
+      • Lập trình viên trưởng — <b>devlead</b> / nest-dev-2026<br>
+      • CEO — <b>ceo</b> / nest-ceo-2026<br>
+      • CFO — <b>cfo</b> / nest-cfo-2026<br>
+      <span style="opacity:.85">⚠️ Đây là đăng nhập demo phía trình duyệt. Khi đưa lên thật, lập trình viên cần thay bằng xác thực có máy chủ.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DASHBOARD ============ -->
+<div class="admin-shell" id="admin-shell" style="display:none">
+  <aside class="admin-side" id="admin-side">
+    <div class="a-brand"><span class="logo">NEST</span><span><b>NEST</b><small>Bảng quản trị</small></span></div>
+    <nav class="admin-nav" id="admin-nav">
+      <button data-panel="overview" class="active"><span class="ico">📊</span><span>Tổng quan</span></button>
+      <button data-panel="content"><span class="ico">📝</span><span>Nội dung trang</span></button>
+      <button data-panel="fund"><span class="ico">💰</span><span>Quỹ học bổng</span></button>
+      <button data-panel="supporters"><span class="ico">🤝</span><span>Mạnh thường quân</span></button>
+      <button data-panel="courses"><span class="ico">📚</span><span>Khóa học</span></button>
+      <button data-panel="map"><span class="ico">🗺️</span><span>Bản đồ</span></button>
+      <button data-panel="accounts"><span class="ico">👥</span><span>Tài khoản admin</span></button>
+      <button data-panel="data"><span class="ico">💾</span><span>Dữ liệu / Bàn giao</span></button>
+    </nav>
+    <div class="a-foot">
+      <div class="who" id="who"></div>
+      <button class="btn btn-ghost btn-sm" id="logout-btn" style="width:100%;justify-content:center">Đăng xuất</button>
+    </div>
+  </aside>
+
+  <main class="admin-main">
+    <div class="admin-topbar">
+      <div>
+        <button class="burger-admin" id="burger-admin" aria-label="menu">☰</button>
+        <h1 id="panel-title">Tổng quan</h1>
+        <p id="panel-desc">Quản lý toàn bộ nội dung hiển thị trên website NEST.</p>
+      </div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <a href="index.html" target="_blank" class="btn btn-ghost btn-sm">Xem website ↗</a>
+      </div>
+    </div>
+
+    <section class="admin-panel active" id="panel-overview"></section>
+    <section class="admin-panel" id="panel-content"></section>
+    <section class="admin-panel" id="panel-fund"></section>
+    <section class="admin-panel" id="panel-supporters"></section>
+    <section class="admin-panel" id="panel-courses"></section>
+    <section class="admin-panel" id="panel-map"></section>
+    <section class="admin-panel" id="panel-accounts"></section>
+    <section class="admin-panel" id="panel-data"></section>
+  </main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>

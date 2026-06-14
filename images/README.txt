@@ -1,0 +1,2 @@
+- icons/ : bộ icon NEST (nest-icons.svg sprite; các .svg lẻ; preview.html)
+- map.jpg, logo-*.png : ảnh bản đồ & logo nhà tài trợ (thêm qua Admin)
